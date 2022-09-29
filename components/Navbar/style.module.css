@@ -20,8 +20,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+    /* font-size: 16px; */
     /*margin-left: '10px' */
+}
+.navItems :hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(133, 239, 133) ;
 }
 
 .typography {
@@ -32,17 +36,3 @@
     cursor: pointer;
 }
 
-.button {
-    border-radius: 20;
-    background-color: #111;
-    color: #fff;
-    text-transform: none;
-    height: 50px;
-    width:'180px';
-    border-radius: 50px;
-    box-shadow: none;
-    /* "&:hover": {
-      backgroundColor: '#111',
-      boxShadow: "none",
-    } */
-}

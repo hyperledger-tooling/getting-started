@@ -1,0 +1,9 @@
+
+.personaCard {
+    background: #936676;
+    background: -webkit-linear-gradient(top left, #936676, #6F2E83);
+    background: -moz-linear-gradient(top left, #936676, #6F2E83);
+    background: linear-gradient(to bottom right, #936676, #6F2E83);
+    z-index: 1000;
+    opacity: 0.9;
+}

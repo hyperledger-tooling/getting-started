@@ -11,18 +11,20 @@ import 'swiper/css/scrollbar';
 
 import Image from 'next/image';
 import classes from './Carousel.module.css'
-import { Grid, Typography, CardMedia, Card, CardHeader, CardContent, Box } from '@mui/material';
+
+import { Grid, Typography, Card, CardHeader, CardContent, Box } from '@mui/material';
 import { sizing, shadows, positions } from '@mui/system';
 
-export default ({ }) => {
+import Button from '../Buttons/index';
+
+export default ({ title, description, url }) => {
+  // console.log("Props are",title)
   return (
     <Grid
-      // className={classes.container}
       container
       direction="row"
       justifyContent="center"
       alignItems="center"
-      // backgroundColor="rgb(240, 92, 139)"
       sx={
         {
           width: '100%',
@@ -31,7 +33,6 @@ export default ({ }) => {
     >
       <Grid
         item
-        // backgroundColor="rgb(92, 240, 134)"
         xs={10}
         sx={
           {
@@ -53,105 +54,242 @@ export default ({ }) => {
           <SwiperSlide>
             <Card
             >
-              <CardMedia
-                component="img"
-                alt="banner1"
-                height="100%"
-                image="/images/banner/banner1.jpg"
-                sx={
-                  {
-                    borderRadius: '20px',
-                    objectFit: 'contain',
-                  }
-                }
-              />
+              <div>
+                <Image
+                  src="/images/banner/banner1.jpg"
+                  alt="banner2"
+                  height="700px"
+                  width="1300px"
+                  // layout='fill' 
+                  className={classes.imageBox}
+                />
+              </div>
 
-              <CardContent
+              <Box
                 sx={
                   {
-                    // height: '0px',
-                    // backgroundColor: 'green'
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    // backgroundColor: "red",
+                    // height: "500px"
                   }
                 }
               >
-                <Grid
-                  container
-                  spacing={0}
-                  direction="column"
-                  alignItems="center"
-                  justify="center"
+                <CardContent
                   sx={
                     {
+                      // backgroundColor: 'green',
                       position: 'absolute',
-                      top: '100px',
+                      borderRadius: '20px',
+                      top: '0px'
                     }
                   }
                 >
-                  <Typography
-                    gutterBottom
-                    variant="h1"
-                    component="div"
-                    color="#e3f2fd"
+                  <Grid
+                    container
+                    spacing={0}
+                    direction="column"
+                    alignItems="center"
+                    justify="center"
+                    sx={
+                      {
+                        top: '100px',
+                        position: 'relative',
+                      }
+                    }
                   >
-                    Hyperledger Foundation
-                  </Typography>
+                    <Typography
+                      gutterBottom
+                      variant="h1"
+                      component="div"
+                      color="#e3f2fd"
+                    >
+                      Hyperledger Foundation
+                    </Typography>
 
-                  <Typography
-                    variant="h4"
-                    color="#e3f2fd"
-                    noWrap="false"
-                  >
-                    A global enterprise blockchain project that offers <br />
-                    the necessary framework, standards, guidelines,<br />
-                    and tools to build open-source blockchains and <br />
-                    related applications for use across various industries
-                  </Typography>
-                </Grid>
+                    <Typography
+                      variant="h4"
+                      color="#e3f2fd"
+                      gutterBottom
 
-              </CardContent>
+                    >
+                      A global enterprise blockchain project that offers <br />
+                      the necessary framework, standards, guidelines,<br />
+                      and tools to build open-source blockchains and <br />
+                      related applications for use across various industries
+                    </Typography>
+
+                    <Box
+                      // sx={
+                      //   {
+                      //     position: 'absolute',
+                      //     top: '400px',
+                      //     backgroundColor: 'red',
+                      //     width: '100%',
+                      //   }
+                      // }
+                    >
+                      <Button type="Secondary" text="Learn More"/>
+                    </Box>
+
+                  </Grid>
+
+                </CardContent>
+              </Box>
+
             </Card>
           </SwiperSlide>
 
-          <SwiperSlide  >
-            <CardMedia
-              component="img"
-              alt="banner1"
-              height="100%"
-              image="/images/banner/banner1.jpg"
-              sx={
-                {
-                  borderRadius: '20px',
-                  objectFit: 'contain',
+          <SwiperSlide>
+            <Card
+            >
+              <div>
+                <Image
+                  src="/images/banner/banner2.jpg"
+                  alt="banner2"
+                  height="700px"
+                  width="1300px"
+                  // layout='fill' 
+                  className={classes.imageBox}
+                />
+              </div>
+
+              <Box
+                sx={
+                  {
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    // backgroundColor: "red",
+                    // height: "500px"
+                  }
                 }
-              }
-            />
+              >
+                <CardContent
+                  sx={
+                    {
+                      // backgroundColor: 'green',
+                      position: 'absolute',
+                      borderRadius: '20px',
+                      top: '0px'
+                    }
+                  }
+                >
+                  <Grid
+                    container
+                    spacing={0}
+                    direction="column"
+                    alignItems="center"
+                    justify="center"
+                    sx={
+                      {
+
+                        top: '100px',
+                      }
+                    }
+                  >
+                    <Typography
+                      gutterBottom
+                      variant="h1"
+                      component="div"
+                      color="#e3f2fd"
+                    >
+                      Hyperledger Foundation
+                    </Typography>
+
+                    <Typography
+                      variant="h4"
+                      color="#e3f2fd"
+                    >
+                      A global enterprise blockchain project that offers <br />
+                      the necessary framework, standards, guidelines,<br />
+                      and tools to build open-source blockchains and <br />
+                      related applications for use across various industries
+                    </Typography>
+                  </Grid>
+
+                </CardContent>
+              </Box>
+
+            </Card>
           </SwiperSlide>
 
+
           <SwiperSlide>
-            {/* <CardMedia
-              component="img"
-              alt="banner1"
-              height="100%"
-              image="/images/banner/banner1.jpg"
-              sx={
-                {
-                  borderRadius: '20px',
-                  objectFit: 'contain',
-                  backgroundColor: 'red'
-                }
-              }
-            /> */}
-            <div>
-              <Image
-                src="/images/banner/banner2.jpg"
-                alt="banner2"
-                height="700px"
-                width="1300px"
-                // layout='fill' 
-                className={classes.imageBox}
+            <Card
+            >
+              <div>
+                <Image
+                  src="/images/banner/banner3.png"
+                  alt="banner2"
+                  height="700px"
+                  width="1300px"
+                  // layout='fill' 
+                  className={classes.imageBox}
                 />
-            </div>
+              </div>
+
+              <Box
+                sx={
+                  {
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    // backgroundColor: "red",
+                    // height: "500px"
+                  }
+                }
+              >
+                <CardContent
+                  sx={
+                    {
+                      // backgroundColor: 'green',
+                      position: 'absolute',
+                      borderRadius: '20px',
+                      top: '0px'
+                    }
+                  }
+                >
+                  <Grid
+                    container
+                    spacing={0}
+                    direction="column"
+                    alignItems="center"
+                    justify="center"
+                    sx={
+                      {
+
+                        top: '100px',
+                      }
+                    }
+                  >
+                    <Typography
+                      gutterBottom
+                      variant="h1"
+                      component="div"
+                      color="#e3f2fd"
+                    >
+                      Hyperledger Foundation
+                    </Typography>
+
+                    <Typography
+                      variant="h4"
+                      color="#e3f2fd"
+                    >
+                      A global enterprise blockchain project that offers <br />
+                      the necessary framework, standards, guidelines,<br />
+                      and tools to build open-source blockchains and <br />
+                      related applications for use across various industries
+                    </Typography>
+                  </Grid>
+
+                </CardContent>
+              </Box>
+
+            </Card>
           </SwiperSlide>
+
 
         </Swiper>
       </Grid>

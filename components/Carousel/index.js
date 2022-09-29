@@ -1,4 +1,5 @@
 import React from 'react'
+import Carousel from './Carousel'
 
 const content = [
     {
@@ -23,7 +24,13 @@ const content = [
 
 function index() {
     return (
-        <div>index</div>
+        <div>
+            {
+                content.map((idx,res) => (
+                    <Carousel title={res.title} description={res.description} url={res.url} />
+                ))
+            }
+        </div>
     )
 }
 
