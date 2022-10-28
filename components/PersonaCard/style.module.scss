@@ -1,0 +1,115 @@
+
+.persona{
+    margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.heading{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+}
+.personaCard {
+   cursor: pointer;
+   position: relative;
+   border-radius: 20px;
+   box-shadow: none;
+}
+.cardContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: blue;
+    position: absolute;
+    bottom:0;
+    // width: 100%; 
+
+}
+.cardMedia{
+    height: 300px;
+    width:500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.cards{
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    margin:24px;
+}
+.inverseCard{
+    width:80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin:24px;
+}
+.inverseCard p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #655858;
+    // background-color: red;
+    margin:10px 20px;
+}
+.cards p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #655858;
+    // background-color: red;
+    margin:10px 20px;
+}
+.contentBox {
+    width:50%;
+    // background-color: orange;
+}
+
+@media (max-width: full) {
+   
+}
+
+@media (max-width: 1050px){
+    .cardMedia{
+        height: 250px;
+        width:400px;
+    }
+    .cards p{
+        font-size: 16px;
+    }
+    .inverseCard p{
+        font-size: 16px;
+    }
+    
+    
+}
+@media (max-width:900px) {
+    .cardMedia{
+        height: 200px;
+        width:350px;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:90%;
+    }
+    .inverseCard{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:90%;
+    }
+    .contentBox{
+        width:90%;
+    }
+    
+}
+
+@media (max-width: 600px){
+   
+}

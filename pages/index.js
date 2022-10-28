@@ -2,11 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar/Navbar';
+import NavbarHover from '../components/Navbar/NavbarHover';
 import Carousel from '../components/Carousel/Carousel';
 import PersonaCard from '../components/PersonaCard/index';
 import Communities from '../components/Communities/index';
 import Events from '../components/Events/index';
 import Announcement from '../components/AnnouncementCards/index';
+import CTA from '../components/CTA/index';
+import Footer from '../components/Footer/index'
 
 import "@fontsource/poppins"
 
@@ -26,6 +29,9 @@ export default function Home() {
         <Events />
         <Communities />
         <Announcement />
+        <CTA />
+        <Footer />
+        {/* <NavbarHover /> */}
       </main>
     </div>
   )

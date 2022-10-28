@@ -2,6 +2,7 @@ import { Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import PersonaCard from './PersonaCard'
+import classes from './style.module.scss';
 
 const data = [
     {
@@ -23,68 +24,30 @@ const data = [
 
 function index() {
     return (
-        <div>
-            <Typography
-                variant="h3"
-                align="center"
-                gutterBottom
-                sx={
-                    {
-                        mb:8,
-                        mt:8,
-                    }
-                }
-            >
+        <div className={classes.persona}>
+            <h1 className={classes.heading}>
                 Personas
-            </Typography>
+            </h1>
 
-            <Box>
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    spacing={8}
-                    sx={
-                        {
-                            display: "flex",
-                            flexWrap: "wrap",
-                        }
-                    }
-                >
-                    {/* <Grid
-                        item
-                        xs={3}
-                    >
-                        {
-                            data.map((info,id) => {
-                                <PersonaCard title={info.title} buttonLink={info.buttonLink} imgUrl={info.imgUrl} />
-                            })
-                        }
-                    </Grid> */}
+            <div className={classes.cards}>
+                <PersonaCard title={"Business"} imgUrl="/images/persona1.jpg" />
+                <div className={classes.contentBox}>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
+                </div>
+            </div>
+            <div className={[classes.inverseCard]}>
+                <PersonaCard title={"Enterprise"} imgUrl="/images/persona2.jpg" />
+                <div className={classes.contentBox}>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
+                </div>
+            </div>
+            <div className={classes.cards}>
+                <PersonaCard title={"Developer"} imgUrl="/images/persona3.jpg" />
 
-                    <Grid
-                        item
-                        xs={3}
-                    >
-                        <PersonaCard />
-                    </Grid>
-
-                    <Grid
-                        item
-                        xs={3}
-                    >
-                        <PersonaCard />
-                    </Grid>
-                    
-                    <Grid
-                        item
-                        xs={3}
-                    >
-                        <PersonaCard />
-                    </Grid>
-                </Grid>
-            </Box>
+                <div className={classes.contentBox}>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
+                </div>
+            </div>
 
         </div>
     )

@@ -54,21 +54,27 @@ function index() {
                 >
                     <Grid
                         item
-                        xs={3}
+                        xs={8}
+                        sm={4}
+                        md={3}
                     >
                         <PersonaCard />
                     </Grid>
 
                     <Grid
                         item
-                        xs={3}
+                        xs={8}
+                        sm={4}
+                        md={3}
                     >
                         <PersonaCard />
                     </Grid>
 
                     <Grid
                         item
-                        xs={3}
+                        xs={8}
+                        sm={4}
+                        md={3}
                     >
                         <PersonaCard />
                     </Grid>

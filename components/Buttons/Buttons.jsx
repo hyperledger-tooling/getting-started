@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button } from '@mui/material';
-import classes from "./style.module.css";
+import classes from "./style.module.scss";
 
 export function PrimaryButton({text }) {
-    text = text || 'Get Involved';;
-    console.log("The text is here", text);
+    text = text || 'Get Involved';
+    // console.log("The text is here", text);
     return (
         <div>
             <Button
@@ -15,13 +15,13 @@ export function PrimaryButton({text }) {
     )
 }
 
-export function SecondaryButton() {
+export function SecondaryButton({text}) {
     return (
         <div>
             <Button
                 className={[classes.button, classes.typography,classes.buttonSecondary]}
                 variant="contained"
-            >Get Involved</Button>
+            >{text}</Button>
         </div>
     )
 }

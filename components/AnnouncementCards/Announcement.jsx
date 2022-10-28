@@ -1,15 +1,21 @@
 import { Typography, Box, Grid } from '@mui/material'
 import React from 'react'
+import classes from './style.module.css'
 
 function Announcement() {
   return (
     <div>
       <Box
         height="auto"
+        // boxShadow={classes.card}
         sx={
           {
-            boxShadow: 4,
+            p:4,
             borderRadius: '20px',
+            // boxShadow: "0px 343px 137px rgba(0, 0, 0, 0.01), 0px 193px 116px rgba(0, 0, 0, 0.05), 0px 86px 86px rgba(0, 0, 0, 0.09), 0px 21px 47px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)",
+            boxShadow: 1,
+            height: '600px',
+            color: "text"
           }
         }
       >
@@ -25,8 +31,12 @@ function Announcement() {
         >
           <Typography
             variant='h5'
-            gutterBottom
             align='start'
+            sx={
+              {
+                mb:5
+              }
+            }
           >
             Developer showcase series: Dr. Yunxi Zhang, Accenture
           </Typography>
@@ -36,8 +46,9 @@ function Announcement() {
             align='start'
             sx={
               {
-                typography: 'body2',
+                typography: 'body1',
                 fontWeight: 'light',
+                mb:2,
               }
             }
             gutterBottom
@@ -54,7 +65,7 @@ function Announcement() {
             gutterBottom
             sx={
               {
-                typography:'body1'
+                typography:'h6'
               }
             }
           >

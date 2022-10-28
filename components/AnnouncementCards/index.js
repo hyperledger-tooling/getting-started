@@ -10,6 +10,8 @@ function index() {
         container 
         align="center"
         justifyContent="center"
+        // height="800px"
+        
       >
         <Typography
           variant="h3"

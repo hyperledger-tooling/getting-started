@@ -1,7 +1,7 @@
 .button {
     border-radius: 20;
-    height: 50px;
-    width:180px;
+    height: 48px;
+    width:180px; 
     border-radius: 50px;
     box-shadow: none;
     background-color: transparent;
@@ -25,8 +25,31 @@
 .typography {
     font-size: 16px;
     font-family: 'Poppins';
-    font-weight: normal;
+    font-weight: 500;
     text-transform: none;
     /* margin-left: 2.5rem; */
     cursor: pointer;
+}
+
+@media (max-width: full) {
+   
+}
+@media (max-width:1050px){
+    .typography {
+        font-size: 12px;
+    }
+    .button{
+        height: 36px;
+        width:150px;
+    }
+}
+@media (max-width: 900px){
+    .button{
+        height: 32px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px){
+    
 }
