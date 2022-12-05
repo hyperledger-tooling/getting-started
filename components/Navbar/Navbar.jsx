@@ -1,187 +1,161 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography } from '@mui/material'
-import { styled, makeStyles } from '@mui/styles';
-import { Box } from '@mui/system';
-import Image from 'next/image';
-import Link from 'next/link';
-import classes from './style.module.scss';
-import Button from '../Buttons/index'
-import MenuIcon from '@mui/icons-material/Menu';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Popover from '@mui/material/Popover';
-import { PrimaryButton } from '../Buttons/Buttons';
-import { useState } from 'react';
-import NavbarHover from './NavbarHover';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+import Image from 'next/image';
 
+const pages = ['Home', 'Projects', 'Community', 'Events', 'Learn'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function Navbar() {
+const ResponsiveAppBar = () => {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const [anchorEl, setAnchorEl] = useState(null);
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
 
-  const handlePopoverOpen = () => {
-    setAnchorEl("root");
-    // setAnchorEl(event.currentTarget);
-  };
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
 
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
 
+    return (
+        <AppBar position="static">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+                    {/* <Box
+                    >
+                        <Image
+                            src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
+                            height="50px"
+                            width="280px"
+                            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} 
+                        />
+                    </Box> */}
+                    <Typography
+                        // variant="h6"
+                        // noWrap
+                        // component="a"
+                        // href="/"
+                        // sx={{
+                        //     mr: 2,
+                        //     display: { xs: 'none', md: 'flex' },
+                        //     fontFamily: 'monospace',
+                        //     fontWeight: 700,
+                        //     letterSpacing: '.3rem',
+                        //     color: 'inherit',
+                        //     textDecoration: 'none',
+                        // }}
+                    >
+                        <Box>
+                            <Image
+                                src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
+                                height="50px"
+                                width="280px"
+                            // sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+                            />
+                        </Box>
+                    </Typography>
 
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-
-  return (
-    <>
-      <AppBar className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-          <div
-            className={classes.logo}
-          // sx={
-          //   {
-          //     height: {
-          //       xs: '40px',
-          //       md: '50px'
-          //     },
-          //     width: {
-          //       xs: "220px",
-          //       md: '250px'
-          //     },
-          //   }
-          // }
-          >
-            <Image
-              src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
-              height="50px"
-              width="280px"
-            />
-          </div>
-          <div
-            className={classes.toolbarItems}
-          >
-
-            <Link href="/">
-              <Typography
-                className={classes.typography}
-              >
-                Home
-              </Typography>
-            </Link>
-
-            <div>
-              <Typography
-                aria-owns={open ? 'mouse-over-popover' : undefined}
-                aria-haspopup="true"
-                onMouseEnter={handlePopoverOpen}
-                onMouseLeave={handlePopoverClose}
-                className={classes.typography}
-              >
-                <Link href="projects">
-                  Projects
-                </Link>
-              </Typography>
-              <Popover
-                id="mouse-over-popover"
-                sx={{
-                  pointerEvents: 'none',
-                  mt: 10,
-                }}
-                open={open}
-                anchorReference="anchorPosition"
-                anchorPosition={{ top: 100, left: 800 }}
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'center',
-                  horizontal: 'center',
-                }}
-                transformOrigin={{
-                  vertical: 'center',
-                  horizontal: 'center',
-                }}
-                onClose={handlePopoverClose}
-                disableRestoreFocus
-              >
-                <Box>
-                  <NavbarHover />
-                </Box>
-              </Popover>
-            </div>
-
-            <Link href="community">
-              <Typography
-                className={classes.typography}
-              // fontFamily="Poppins"
-              // sx={
-              //   {
-              //     ml: 4,
-              //     cursor: "pointer"
-              //   }
-              // }
-              >
-                Community
-              </Typography>
-            </Link>
-
-            <Link href="events">
-              <Typography
-                className={classes.typography}
-              // fontFamily="Poppins"
-              //   sx={
-              //   {
-              //     ml                                                                                                                                                                        : 4,
-              //     cursor: "pointer"
-              //   }
-              // }
-              >
-                Events
-              </Typography>
-            </Link>
-
-            <Link href="https://www.hyperledger.org/">
-              <Typography
-                className={classes.typography}
-              // fontFamily="Poppins"
-              // sx={
-              //   {
-              //     ml: 4,
-              //     cursor: "pointer"
-              //   }
-              // }
-              >
-                <Button type="primary" text="Get Involved" />
-              </Typography>
-            </Link>
-          </div>
-
-          <Box
-            sx={
-              {
-                display: {
-                  md: "none"
-                }
-              }
-            }
-          >
-            <IconButton
-              size="large"
-              color="inherit"
-              onClick={handleOpenNavMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </>
-  )
-}
-
-export default Navbar
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton
+                            size="large"
+                            // aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{
+                                display: { xs: 'block', md: 'none' },
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    <Typography
+                                        variant='body1'
+                                        textAlign="center"
+                                        color="#111"
+                                    >{page}
+                                    </Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href=""
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'none' },
+                            flexGrow: 1,
+                            fontFamily: 'Poppins',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        <Box
+                        >
+                            <Image
+                                src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
+                                height="50px"
+                                width="280px"
+                            />
+                        </Box>
+                    </Typography>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page) => (
+                            <Button
+                                key={page}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: '#111', display: 'block' }}
+                            >
+                                {page}
+                            </Button>
+                        ))}
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
+};
+export default ResponsiveAppBar;

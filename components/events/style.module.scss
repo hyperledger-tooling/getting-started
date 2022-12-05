@@ -1,0 +1,52 @@
+
+.eventBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+.eventCard {
+    position: relative;
+    box-shadow: 4;
+    border-radius: 20px;
+    background-color:green;
+    width: 100vw;
+    box-shadow: none;
+}
+.eventCardMedia {
+    border-radius:20px;
+    width:100%;
+    object-fit: cover;
+}
+.eventCardContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    // z-index: 'tooltip';
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: full) {
+    
+}
+
+@media (max-width: 1050px){
+    .heading{
+        font-size: 36px;
+    }
+    
+}
+@media (max-width:900px) {
+    .eventBox{
+        margin:50px;
+    }
+    .heading{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px){
+   
+
+}

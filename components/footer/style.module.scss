@@ -1,0 +1,38 @@
+.footerBox {
+    background-color: #262424;
+    height: 90vh;
+}
+.footerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+.footerIcon {
+    font-size: 3rem;
+    color:#262424;
+    margin:0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    padding:0.5rem;
+}
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footerContentCards {
+    padding:0.5rem;
+    margin: 0.5rem;
+    color:white;
+}
+.footerContentCards h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.footerCopyText {
+    color:white;
+    margin:2rem;
+    padding: 2rem;
+}

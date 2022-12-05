@@ -1,0 +1,86 @@
+
+.mainSection{
+    display: flex;
+    justify-content: space-evenly;
+    margin:2rem;
+    flex-wrap: wrap;
+}
+
+.filterOption{
+    background-color: #fff;
+    width: 20rem;
+    height:auto;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.filterBox {
+    align-items: center; 
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.filterBox h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+}
+.filterBoxCheckbox{
+    display: flex;
+    justify-content:space-between;
+}
+
+.filterBoxCheckbox div {
+    margin:  0.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background-color: pink;
+    display: flex;
+}
+.checkIcon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.cardSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardBox{
+    height:45vh;
+    width:55vw;
+    background-color: #fff;
+    padding:1.5rem;
+    border-radius: 1.5rem;
+    margin:1.5rem;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.cardHeader div{
+    display: flex;
+    align-items: center;
+}
+.cardHeader p {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+.cardDesc h5 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+.cardDesc p {
+    font-weight: 400;
+    font-size: 1rem;
+    color:rgb(37, 37, 37)
+}
+

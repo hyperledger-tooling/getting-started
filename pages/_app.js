@@ -1,13 +1,14 @@
 import '../styles/globals.css'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import theme from '../theme/Theme'
-
+import Navbar from '../components/navbar/navbar';
+import Footer from '../components/footer/footer'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+    <Navbar />
+    <Component {...pageProps} />
+    <Footer />
+    </>
   )
 
   

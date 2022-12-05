@@ -1,17 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar/Navbar';
-import NavbarHover from '../components/Navbar/NavbarHover';
-import Carousel from '../components/Carousel/Carousel';
-import PersonaCard from '../components/PersonaCard/index';
-import Communities from '../components/Communities/index';
-import Events from '../components/Events/index';
-import Announcement from '../components/AnnouncementCards/index';
-import CTA from '../components/CTA/index';
-import Footer from '../components/Footer/index'
+import classes from '../styles/globalStyle.module.scss'
+import Carousel from '../components/carousel/carousel';
+import PersonaCard from '../components/personaCard/personaCard';
+import Communities from '../components/communities/communities';
+import Events from '../components/events/events';
+import Announcement from '../components/announcementCards/announcementCards';
+import CTA from '../components/cta/cta';
 
-import "@fontsource/poppins"
 
 export default function Home() {
   return (
@@ -23,14 +18,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navbar />
-        <Carousel />
+        <section className={classes.section}>
+          <Carousel />
+        </section>
         <PersonaCard />
         <Events />
         <Communities />
         <Announcement />
         <CTA />
-        <Footer />
+        {/* <Footer /> */}
         {/* <NavbarHover /> */}
       </main>
     </div>

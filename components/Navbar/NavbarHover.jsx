@@ -10,36 +10,39 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function NavbarHover() {
   return (
-    <div className={classes.navbarHover}>
-      <div className={classes.navbarContent}>
-        <h2 className={classes.navbarHeading}>Projects</h2>
-        <li>Incubated Projects</li>
-        <li>Graduated Projects</li>
-        <li>Propose a Project</li>
-        <li>All projects</li>
+    <div className={classes.navbarBox}>
+      <div className={classes.navbarHover}>
+        <div className={classes.navbarContent}>
+          <h2 className={classes.navbarHeading}>Projects</h2>
+          <li>Incubated Projects</li>
+          <li>Graduated Projects</li>
+          <li>Propose a Project</li>
+          <li>All projects</li>
 
-      </div>
-      <div className={classes.navbarCards}>
-        <Image height="150px" width="250px" src="/logos/fabric.svg" />
-        <div className={classes.navbarCardContent}>
-          Fabric 2.0 New Release
         </div>
-        <p>
-          See more
-          <ArrowForwardIcon />
-        </p>
-      </div>
-      <div className={classes.navbarCards}>
-        <Image height="150px" width="250px" src="/logos/fabric.svg" />
-        <div className={classes.navbarCardContent}>
-          Fabric 2.0 New Release
+        <div className={classes.navbarCards}>
+          <Image height="150px" width="250px" src="/logos/fabric.svg" />
+          <div className={classes.navbarCardContent}>
+            Fabric 2.0 New Release
+          </div>
+          <p>
+            See more
+            <ArrowForwardIcon />
+          </p>
         </div>
-        <p>
-          See more
-          <ArrowForwardIcon />
-        </p>
+        <div className={classes.navbarCards}>
+          <Image height="150px" width="250px" src="/logos/fabric.svg" />
+          <div className={classes.navbarCardContent}>
+            Fabric 2.0 New Release
+          </div>
+          <p>
+            See more
+            <ArrowForwardIcon />
+          </p>
+        </div>
       </div>
     </div>
+
 
   )
 }

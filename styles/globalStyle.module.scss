@@ -1,0 +1,91 @@
+.section {
+    margin-top: 6rem;
+  }
+  
+.headingSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 72px;
+  text-align: center;
+}
+.subHeading{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color:#302e2e;
+}
+
+.textBox {
+  padding:0 4rem;
+  color: #655858;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.primaryButton {
+    border-radius: 20;
+    // height: 3rem;
+    // width: 11rem; 
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    background-color: #111;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-style: none;
+}
+.secondaryButton {
+  border-radius: 20;
+    // height: 3rem;
+    // width: 11rem; 
+    padding:0.5rem 2rem;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #111;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-style: none;
+}
+
+
+@media (max-width: full) {
+   
+}
+@media (max-width:1050px){
+    .typography {
+        font-size: 12px;
+    }
+    .button{
+        height: 36px;
+        width:150px;
+    }
+}
+@media (max-width: 900px){
+    .button{
+        height: 32px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px){
+    
+}
