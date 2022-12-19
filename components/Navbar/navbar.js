@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './index';
 
-function index() {
+function Index() {
   return (
     <>
         <Navbar />
@@ -9,4 +9,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

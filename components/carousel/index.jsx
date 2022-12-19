@@ -42,7 +42,7 @@ const data = [
 
 ]
 
-export default ({ title, description, url }) => {
+function Index ({ title, description, url }) {
   // console.log("Props are",title)
   return (
     <Grid
@@ -116,3 +116,5 @@ export default ({ title, description, url }) => {
 
   );
 };
+
+export default Index;

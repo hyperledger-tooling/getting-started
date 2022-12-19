@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from '../styles/globalStyle.module.scss'
-import IssueCard from '../components/issueCard/issueCard'
+import IssueCard from '../components/issuecard/issueCard'
 
 function developers() {
   return (

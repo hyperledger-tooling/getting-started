@@ -20,7 +20,6 @@ function enterprises() {
       <h1 className={classes.subHeading}>
         Contribute
       </h1>
-      <IssueCard />
     </div>
   )
 }

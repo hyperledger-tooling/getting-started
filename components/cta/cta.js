@@ -84,7 +84,7 @@ const data = [
   },
 ]
 
-function index() {
+function Index() {
   return (
     <div className={classes.ctaBox}>
       <h1 className={styles.heading}>
@@ -96,7 +96,7 @@ function index() {
       <div className={classes.ctaCardContainer}>
         {
           data.map((data,id) => (
-            <CTA title={data.title} desc={data.desc} icon={data.icon} />
+            <CTA key={id} title={data.title} desc={data.desc} icon={data.icon} />
           ))
         }
       </div>
@@ -104,4 +104,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

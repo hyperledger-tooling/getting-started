@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from './style.module.scss'
 import Link from 'next/link';
-import Button from '../Buttons/index'
 import Image from 'next/image'
 
 
@@ -23,7 +22,7 @@ const data = [
   },
 ]
 
-export default () => {
+export default function Index() {
   return (
     <div className={classes.mainBox}>
       <div className={classes.communityBox}>

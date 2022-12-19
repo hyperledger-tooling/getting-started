@@ -4,7 +4,7 @@ import Carousel from '../components/carousel/carousel';
 import PersonaCard from '../components/personaCard/personaCard';
 import Communities from '../components/communities/communities';
 import Events from '../components/events/events';
-import Announcement from '../components/announcementCards/announcementCards';
+import Announcement from '../components/announcement/announcementCards';
 import CTA from '../components/cta/cta';
 
 

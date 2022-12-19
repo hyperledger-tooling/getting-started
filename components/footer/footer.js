@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './index'
 
-function index() {
+function Index() {
   return (
     <div>
       <Footer />
@@ -9,4 +9,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

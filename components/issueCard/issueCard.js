@@ -5,7 +5,7 @@ import Card from './index'
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 
-function index() {
+function Index() {
     return (
         <div className={classes.mainSection}>
             <div className={classes.filterOption}>
@@ -124,4 +124,4 @@ function index() {
     )
 }
 
-export default index
+export default Index
