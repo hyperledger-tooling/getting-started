@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from '../styles/globalStyle.module.scss'
-import IssueCard from '../components/issuecard/issueCard'
+import classes from '../../styles/globalStyle.module.scss'
+import IssueCard from '../../components/issue/issueCard'
 
-function developers() {
+function index() {
   return (
     <div className={classes.section}>
       <div className={classes.headingSection}>
@@ -26,4 +26,4 @@ function developers() {
   )
 }
 
-export default developers
+export default index
