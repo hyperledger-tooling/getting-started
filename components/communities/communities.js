@@ -1,11 +1,10 @@
 
 import React from 'react'
-import PersonaCard from '../personaCard/PersonaCard'
 import Communities from './index';
 import classes from './style.module.scss';
 import styles from '../../styles/globalStyle.module.scss'
 
-function index() {
+function Index() {
     return (
         <div>
             <h1 className={styles.heading}>
@@ -19,4 +18,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

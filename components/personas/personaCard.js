@@ -1,5 +1,3 @@
-import { Grid, Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import React from 'react'
 import PersonaCard from './index'
 import classes from './style.module.scss';
@@ -23,7 +21,7 @@ const data = [
     },
 ]
 
-function index() {
+function Index() {
     return (
         <div className={classes.persona}>
             <h1 className={styles.heading}>
@@ -53,4 +51,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

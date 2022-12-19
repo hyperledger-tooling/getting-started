@@ -23,7 +23,7 @@ const data = [
   },
 ]
 
-export default ({ title, buttonLink, imgUrl }) => {
+export default function Index({ title, buttonLink, imgUrl }) {
   return (
     <div className={classes.communityMainBox}>
       <div className={classes.communityBox}>
@@ -35,8 +35,8 @@ export default ({ title, buttonLink, imgUrl }) => {
         <div className={classes.communityCardBox}>
           {
             (data.map((data, id) => (
-              <div className={classes.communityMedia}>
-                <Image src={data.imgUrl} height="300px" width="300px" />
+              <div key={id} className={classes.communityMedia}>
+                <Image src={data.imgUrl} height="300px" width="300px" alt="communities"/>
                 <div className={classes.communityButton}>
                   <Link href={data.buttonLink}>
                   <button className={styles.secondaryButton} >

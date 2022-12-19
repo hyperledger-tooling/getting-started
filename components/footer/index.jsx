@@ -9,12 +9,12 @@ import ChatIcon from '@mui/icons-material/Chat';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 
-function index() {
+function Index() {
   return (
     <div className={classes.footerBox}>
       <div className={classes.footerHeader}>
         <div>
-          <Image src="/icons/Hyperledger-white.png" height={60} width={300} />
+          <Image src="/icons/Hyperledger-white.png" height={60} width={300} alt="logo"/>
         </div>
         <div className={classes.footerIconBox}>
           <GitHubIcon className={classes.footerIcon} />
@@ -81,4 +81,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

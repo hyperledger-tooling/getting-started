@@ -1,12 +1,11 @@
 import { Card, CardMedia, Box, CardContent, Typography } from '@mui/material'
 import React from 'react'
-import Button from '../Buttons/index'
 import classes from './style.module.scss'
 import Link from 'next/link';
 import styles from '../../styles/globalStyle.module.scss'
 
 
-export default({ title, buttonLink, imgUrl }) => {
+export default function Index({ title, buttonLink, imgUrl }) {
   return (
     <div>
       <Card

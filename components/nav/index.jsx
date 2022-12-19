@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{} from 'react'
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import { useState } from 'react';
 import NavbarHover from './NavbarHover';
 import styles from '../../styles/globalStyle.module.scss'
 
-export default () => {
+export default function Index () {
 
   const [anchorEl, setAnchorEl] = useState(null);
 

@@ -21,7 +21,7 @@ function NavbarHover() {
 
         </div>
         <div className={classes.navbarCards}>
-          <Image height="150px" width="250px" src="/logos/fabric.svg" />
+          <Image height="150px" width="250px" src="/logos/fabric.svg" alt="project icon"/>
           <div className={classes.navbarCardContent}>
             Fabric 2.0 New Release
           </div>
@@ -31,7 +31,7 @@ function NavbarHover() {
           </p>
         </div>
         <div className={classes.navbarCards}>
-          <Image height="150px" width="250px" src="/logos/fabric.svg" />
+          <Image height="150px" width="250px" src="/logos/fabric.svg" alt="project icon" />
           <div className={classes.navbarCardContent}>
             Fabric 2.0 New Release
           </div>

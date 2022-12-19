@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from '../styles/globalStyle.module.scss'
+import classes from '../../styles/globalStyle.module.scss'
+import IssueCard from '../../components/issue/issueCard'
 
-
-function enterprises() {
+function index() {
   return (
     <div className={classes.section}>
       <div className={classes.headingSection}>
@@ -20,8 +20,10 @@ function enterprises() {
       <h1 className={classes.subHeading}>
         Contribute
       </h1>
+        <IssueCard />
     </div>
+
   )
 }
 
-export default enterprises
+export default index

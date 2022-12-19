@@ -70,6 +70,7 @@ const ResponsiveAppBar = () => {
                                 src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
                                 height="50px"
                                 width="280px"
+                                alt="logo"
                             // sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
                             />
                         </Box>
@@ -139,6 +140,7 @@ const ResponsiveAppBar = () => {
                                 src="https://challenge.hyperledger.org/css/2022_style/img/logos/hyperledgerfoundation.png"
                                 height="50px"
                                 width="280px"
+                                alt="logo"
                             />
                         </Box>
                     </Typography>

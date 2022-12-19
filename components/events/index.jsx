@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, CardMedia, Box, CardContent } from '@mui/material'
-import Button from '../Buttons/index'
 import classes from './style.module.scss'
 import styles from '../../styles/globalStyle.module.scss'
 
 
-export default () => {
+export default function Index (){
     return (
         <Card
             className={classes.eventCard}
@@ -18,18 +17,6 @@ export default () => {
             // className={classes.eventCardMedia}
             />
             <CardContent
-                // sx={
-                //     {
-                //         display: 'flex',
-                //         justifyContent: 'center',
-                //         alignItems: 'center',
-                //         // backgroundColor: 'blue',
-                //         position: 'absolute',
-                //         zIndex: 'tooltip',
-                //         bottom: '0',
-                //         width: '100%',
-                //     }
-                // }
                 className={classes.eventCardContent}
             >
                 <button className={styles.secondaryButton} >
