@@ -14,7 +14,7 @@ import classes from './style.module.scss'
 import styles from '../../styles/globalStyle.module.scss'
 
 
-import { Grid, Typography, Card, CardHeader, CardContent, Box } from '@mui/material';
+import { Grid } from '@mui/material';
 
 const data = [
   {
@@ -67,7 +67,7 @@ function Index ({ title, description, url }) {
           {
             data.map((data, id) => (
               <SwiperSlide key={data.id}>
-                <Card
+                <div
                 >
                   <div>
                     <Image
@@ -82,7 +82,7 @@ function Index ({ title, description, url }) {
 
                   <div
                   >
-                    <CardContent
+                    <div
                       className={classes.card}
                     >
                       <div
@@ -102,10 +102,10 @@ function Index ({ title, description, url }) {
 
                       </div>
 
-                    </CardContent>
+                    </div>
                   </div>
 
-                </Card>
+                </div>
               </SwiperSlide>
             ))
           }

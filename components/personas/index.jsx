@@ -3,33 +3,34 @@ import React from 'react'
 import classes from './style.module.scss'
 import Link from 'next/link';
 import styles from '../../styles/globalStyle.module.scss'
-
+import Image from 'next/image'
 
 export default function Index({ title, buttonLink, imgUrl }) {
   return (
     <div>
-      <Card
+      <div
         className={classes.personaCard}
       >
-        <CardMedia
-          component="img"
-          height="300"
-          width="500"
-          image={imgUrl}
+        <Image
+          // component="img"
+          height={300}
+          width={500}
+          alt="perona images"
+          src={imgUrl}
           className={classes.cardMedia}
         />
 
         <Link href={buttonLink}>
-          <CardContent
+          <div
             className={classes.cardContent}
           >
             <button className={styles.secondaryButton} >
               {title}
             </button>
-          </CardContent>
+          </div>
         </Link>
 
-      </Card>
+      </div>
     </div>
   )
 }
