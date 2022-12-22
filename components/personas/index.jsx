@@ -11,14 +11,18 @@ export default function Index({ title, buttonLink, imgUrl }) {
       <div
         className={classes.personaCard}
       >
-        <Image
-          // component="img"
-          height={300}
-          width={500}
-          alt="perona images"
-          src={imgUrl}
-          className={classes.cardMedia}
-        />
+        <div className={classes.cardMedia}
+        >
+          <Image
+            // component="img"
+            height={300}
+            width={500}
+            alt="perona images"
+            src={imgUrl}
+          />
+        </div>
+
+
 
         <Link href={buttonLink}>
           <div

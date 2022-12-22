@@ -1,0 +1,74 @@
+// Big card Css
+.bigCard{
+    height:50vh;
+    width:80vw;
+    background-color: rgb(55, 52, 52);
+    border-radius: 20px;
+}
+
+// Video card Css
+.videoCard{
+    height:60vh;
+    width:60vw;
+    background-color: rgb(55, 52, 52);
+    border-radius: 20px;
+}
+
+// Project card css
+// Card1
+.projectCard1{
+    height: 250px;
+    width:250px;
+    border-radius: 20px;
+    background-color: pink;
+    margin:1rem;
+}
+// Card2
+.projectCard2{
+    height: 250px;
+    width:250px;
+    border-radius: 20px;
+    background-color: rgb(83, 246, 238);
+    margin:1rem;
+}
+.card2Logo{
+    height:70%;
+    border-radius: 20px 20px 0 0;
+    background-color: yellow;
+    width:100%;
+}
+
+@media (max-width: full) {
+  
+}
+@media (max-width:1050px){
+    .bigCard{
+        height:45vh;
+        width:85vw;
+      }
+      .videoCard{
+        height:45vh;
+        width:65vw;
+      }
+}
+@media (max-width: 900px){
+    .bigCard{
+        height:40vh;
+        width:85vw;
+      }
+      .videoCard{
+        height:45vh;
+        width:70vw;
+      }
+}
+
+@media (max-width: 600px){
+  .bigCard{
+    height:30vh;
+    width:90vw;
+  }
+  .videoCard{
+    height:40vh;
+    width:90vw;
+  }
+}

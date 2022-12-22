@@ -51,7 +51,8 @@ function Index ({ title, description, url }) {
     >
       <Grid
         item
-        xs={10}
+        xs={11}
+        md={10}
         className={classes.carouselItems}
       >
         <Swiper
@@ -61,7 +62,6 @@ function Index ({ title, description, url }) {
           slidesPerView={1}
           navigation
           autoplay
-
           pagination={{ clickable: true }}
         >
           {
@@ -83,10 +83,10 @@ function Index ({ title, description, url }) {
                   <div
                   >
                     <div
-                      className={classes.card}
+                      className={classes.carouselCard}
                     >
                       <div
-                        className={classes.cardContent}
+                        className={classes.carouselCardContent}
                       >
                         <h1>
                           {data.title}

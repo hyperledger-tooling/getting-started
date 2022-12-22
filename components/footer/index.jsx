@@ -75,8 +75,6 @@ function Index() {
           © 2022 Hyperledger Foundation
         </div>
       </div>
-
-
     </div>
   )
 }

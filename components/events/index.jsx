@@ -2,20 +2,25 @@ import React from 'react'
 import { Card, CardMedia, Box, CardContent } from '@mui/material'
 import classes from './style.module.scss'
 import styles from '../../styles/globalStyle.module.scss'
+import Image from 'next/image'
 
-
-export default function Index (){
+export default function Index() {
     return (
-        <Card
+        <div
             className={classes.eventCard}
         >
-            <CardMedia
-                component="img"
-                height="380"
-                width="90"
-                image="/images/persona6.jpg"
-            // className={classes.eventCardMedia}
-            />
+            <div className={classes.eventImageBox} 
+            >
+                <Image
+                    // component="img"
+                    height={300}
+                    width={1200}
+                    alt="event image"
+                    src="/images/persona6.jpg"
+                    // className="classes.eventImageBox"
+                />
+                {/* dfdfdfd */}
+            </div>
             <CardContent
                 className={classes.eventCardContent}
             >
@@ -23,6 +28,6 @@ export default function Index (){
                     Register here
                 </button>
             </CardContent>
-        </Card>
+        </div>
     )
 }

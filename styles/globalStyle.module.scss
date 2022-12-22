@@ -4,6 +4,7 @@
   
 .headingSection {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -11,7 +12,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 3rem;
-  line-height: 72px;
+  // line-height: 4rem;
   text-align: center;
 }
 .subHeading{
@@ -27,9 +28,13 @@
   padding:0 4rem;
   color: #655858;
   display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+.textBox p{
+  width: 70vw;
 }
 .primaryButton {
     border-radius: 20;
@@ -66,9 +71,38 @@
     border-style: none;
 }
 
+//  Newcomer page style
+.project{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  // background-color: red;
+  padding:2rem;
+}
+.projectSection {
+  // background-color: rgb(145, 196, 145);
+  width:80%;
+}
+.title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color:#302e2e;
+  // background-color: green;
+  margin: 1rem;
+}
+.cardSection {
+  display: flex;
+  align-items: center;
+  // justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 
 @media (max-width: full) {
-   
+  
 }
 @media (max-width:1050px){
     .typography {
@@ -78,14 +112,50 @@
         height: 36px;
         width:150px;
     }
+    .textBox{
+      padding: 0 2rem;
+    }
+    .textBox p{
+      width: 90%;
+    }
 }
 @media (max-width: 900px){
     .button{
         height: 32px;
         width: 120px;
     }
+    .secondaryButton {
+      font-size: 0.8rem;
+    }
+    .heading{
+      font-size: 2.5rem;
+    }
+    .subHeading{
+      font-size: 2rem;
+    }
+    .textBox{
+      padding: 0 1.75rem;
+    }
+    .textBox p{
+      width: 90vw;
+    }
 }
 
 @media (max-width: 600px){
-    
+  .secondaryButton {
+    padding:0.5rem 1.5rem;
+    font-size: 0.6rem;
+  }
+  .heading{
+    font-size: 2rem;
+  }
+  .subHeading{
+    font-size: 1.5rem;
+  }
+  .textBox{
+    padding: 0 1.5rem;
+  }
+  .textBox p{
+    width: 90%;
+  }
 }

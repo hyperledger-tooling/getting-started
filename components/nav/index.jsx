@@ -1,4 +1,4 @@
-import React,{} from 'react'
+import React, { } from 'react'
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import { useState } from 'react';
 import NavbarHover from './NavbarHover';
 import styles from '../../styles/globalStyle.module.scss'
 
-export default function Index () {
+export default function Index() {
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -38,8 +38,14 @@ export default function Index () {
 
   return (
     <>
-      <AppBar className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
+      <AppBar
+        color="inherit"
+        elevation={0}
+        className={classes.appBar}
+        >
+        <Toolbar 
+        className={classes.toolBar}
+        >
           <div
             className={classes.logo}
           >
@@ -58,15 +64,15 @@ export default function Index () {
           >
 
             <Link href="/">
-              <Typography
+              <p
                 className={classes.typography}
               >
                 Home
-              </Typography>
+              </p>
             </Link>
 
             <div>
-              <Typography
+              <p
                 aria-owns={open ? 'mouse-over-popover' : undefined}
                 aria-haspopup="true"
                 onMouseEnter={handlePopoverOpen}
@@ -76,7 +82,7 @@ export default function Index () {
                 <Link href="projects">
                   Projects
                 </Link>
-              </Typography>
+              </p>
               < Popover
                 id="mouse-over-popover"
                 sx={{
@@ -92,7 +98,7 @@ export default function Index () {
               </Popover>
             </div>
             <div>
-              <Typography
+              <p
                 aria-owns={open ? 'mouse-over-popover' : undefined}
                 aria-haspopup="true"
                 onMouseEnter={handlePopoverOpen}
@@ -102,7 +108,7 @@ export default function Index () {
                 <Link href="community">
                   Community
                 </Link>
-              </Typography>
+              </p>
               < Popover
                 id="mouse-over-popover"
                 sx={{
@@ -120,7 +126,7 @@ export default function Index () {
               </Popover>
             </div>
             <div>
-              <Typography
+              <p
                 aria-owns={open ? 'mouse-over-popover' : undefined}
                 aria-haspopup="true"
                 onMouseEnter={handlePopoverOpen}
@@ -130,7 +136,7 @@ export default function Index () {
                 <Link href="events">
                   Events
                 </Link>
-              </Typography>
+              </p>
               < Popover
                 id="mouse-over-popover"
                 sx={{
@@ -165,13 +171,13 @@ export default function Index () {
             </Link> */}
 
             <Link href="https://www.hyperledger.org/">
-              <Typography
+              <p
                 className={classes.typography}
               >
                 <button className={styles.primaryButton} >
                   Get Involved
                 </button>
-              </Typography>
+              </p>
             </Link>
           </div>
 

@@ -2,8 +2,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-color: rgb(233, 106, 106); */
-        /* height: 90vh; */
+        // background-color: rgb(233, 106, 106); 
+        // height: 90vh; 
         margin:0px 50px;
 
 }
@@ -12,14 +12,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    // width:50%;
+    // background-color: red;
     // box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
 }
 .carouselItems {
-    margin-top: 36px;
+    margin-top: 10rem;
     display: flex;
     flex-grow:80%;
-    
+    border-radius:20px;
 }
 .imageBox{
     height:700px;
@@ -33,7 +33,7 @@
 .swiper-button-prev {
     color: #fff;
 }
-.card {
+.carouselCard {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@
     overflow: hidden;
     height:100%;
 }
-.cardContent {
+.carouselCardContent {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,14 +50,14 @@
     width:80%;
     color: rgb(253, 245, 245);
 }
-.cardContent h1{
+.carouselCardContent h1{
     font-weight: 700;
     font-size: 48px;
     // line-height: 96px;
     // background-color: blue;
 
 }
-.cardContent p {
+.carouselCardContent p {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -69,34 +69,34 @@
 
 
 @media (max-width: 1050px) {
-    .cardContent{
+    .carouselCardContent{
         width:80%;
     }
-    .cardContent h1{
+    .carouselCardContent h1{
         font-size: 36px;
     }
-    .cardContent p{
+    .carouselCardContent p{
         font-size: 20px;
     }
 }
 
 @media (max-width: 900px){
-    .cardContent{
+    .carouselCardContent{
         width: 90%;
     }
-    .cardContent h1{
+    .carouselCardContent h1{
         font-size: 32px;
     }
-    .cardContent p{
+    .carouselCardContent p{
         font-size: 16px;
     }
 }
 
 @media (max-width: 600px){
-    .cardContent h1{
+    .carouselCardContent h1{
         font-size: 24px;
     }
-    .cardContent p {
+    .carouselCardContent p {
         font-size: 12px;
     }
 }

@@ -11,9 +11,11 @@
     justify-content: center;
     overflow: hidden;
     z-index: 300;
+    // position: fixed;
+    // top:0;
 }
 
-.toolbar {
+.toolBar {
     width: 90vw;
     display: flex;
     flex-direction: row;

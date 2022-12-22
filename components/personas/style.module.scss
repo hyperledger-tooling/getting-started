@@ -1,24 +1,16 @@
 
 .persona{
-    margin-top: 96px;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
-}
-.heading{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 72px;
-    text-align: center;
 }
 .personaCard {
    cursor: pointer;
    position: relative;
    border-radius: 20px;
    box-shadow: none;
-   
 }
 .cardContent {
     display: flex;
@@ -29,23 +21,28 @@
     width: 100%; 
 }
 .cardMedia{
-    height: 300px;
+    height:300px;
     width:500px;
     border-radius: 20px;
-    object-fit: cover;
+    margin:1rem;
+}
+.cardMedia img{
+    object-fit: fill;
+    border-radius:20px;
 }
 .cards{
     width:80%;
     display: flex;
     justify-content: space-between;
-    margin:48px;
+    margin:3rem;
+    // background-color: yellow;
 }
 .inverseCard{
     width:80%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin:48px;
+    margin:3rem;
 }
 .inverseCard p{
     font-weight: 400;
@@ -65,6 +62,7 @@
 }
 .contentBox {
     width:50%;
+    margin:0.5rem;
     // background-color: orange;
 }
 
@@ -99,12 +97,14 @@
         justify-content: center;
         align-items: center;
         width:90%;
+        margin: 2rem;
     }
     .inverseCard{
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width:90%;
+        margin: 2rem;
     }
     .contentBox{
         width:90%;
@@ -116,5 +116,22 @@
 }
 
 @media (max-width: 600px){
-   
+    .persona{
+        margin-top: 2rem;
+    }
+    .cards {
+        margin:1rem;
+    }
+    .inverseCard{
+        margin:1rem;
+    }
+    .cardMedia {
+        height:200px;
+        width:350px;
+        margin:1rem;
+    }
+    .cardContent{
+        bottom:0.5rem;
+        width: 100%;
+    }
 }
