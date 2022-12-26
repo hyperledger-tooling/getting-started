@@ -17,25 +17,102 @@
 // Project card css
 // Card1
 .projectCard1{
-    height: 250px;
-    width:250px;
+    height: 280px;
+    width:280px;
     border-radius: 20px;
-    background-color: pink;
+    background-color: #fff;
     margin:1rem;
+    padding:1rem;
+}
+.projectCard1:hover{
+  box-shadow: 0px 120px 48px rgba(115, 104, 104, 0.01), 0px 68px 41px rgba(115, 104, 104, 0.05), 0px 30px 30px rgba(115, 104, 104, 0.09), 0px 8px 17px rgba(115, 104, 104, 0.1), 0px 0px 0px rgba(115, 104, 104, 0.1);
+  cursor: pointer;
+}
+.projectCard1 p{
+  font-size: 1rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card1logo{
+  display: flex;
+  padding: 1rem;
+}
+.card1Icons{
+  margin:0 1rem;
+  font-size: 1.5rem;
 }
 // Card2
 .projectCard2{
-    height: 250px;
-    width:250px;
+    height: 280px;
+    width:280px;
     border-radius: 20px;
-    background-color: rgb(83, 246, 238);
+    background-color: #fff;
     margin:1rem;
+    overflow: hidden;
 }
 .card2Logo{
     height:70%;
     border-radius: 20px 20px 0 0;
-    background-color: yellow;
+    background-color: rgba(241, 86, 74, 0.3);
     width:100%;
+    padding:2rem;
+}
+.card2Content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card2IconBox{
+  text-align: center;
+  line-height: 0.5rem;
+  padding:0.5rem;
+  cursor: pointer;
+}
+.card2IconBox p{
+  font-size: 1rem;
+  font-weight: 300;
+}
+.card2Icons{
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+// Profile Card
+.profileCard{
+   height: 320px;
+    width:300px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin:1rem;
+    overflow: hidden;
+}
+.profilePic{
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profilePic img{
+  height:10rem;
+  width:10rem;
+  border-radius: 50%;
+  background-color: rgb(90, 88, 88);
+  object-fit: cover;
+}
+.profilePicContent p{
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1rem;
+}
+.profileSocial{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: green;
+  margin: 0 3rem;
 }
 
 @media (max-width: full) {

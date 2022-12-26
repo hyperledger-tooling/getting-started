@@ -16,8 +16,8 @@ export default function Index() {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handlePopoverOpen = () => {
-    setAnchorEl("root");
-    // setAnchorEl(event.currentTarget);
+    // setAnchorEl("root");
+    setAnchorEl(event.currentTarget);
   };
 
   const handlePopoverClose = () => {
