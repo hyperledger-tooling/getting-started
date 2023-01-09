@@ -12,7 +12,7 @@ export default function Index({ title, desc, icon }) {
       </div>
       <div className={classes.ctaCardContent}>
         <div className={classes.ctaCardTitle}>{title}</div>
-        <div>{desc}</div>
+        <div className={classes.ctaCardDesc}>{desc}</div>
       </div>
     </div>
   )

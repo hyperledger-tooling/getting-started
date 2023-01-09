@@ -47,6 +47,11 @@ function Index ({ title, description, url }) {
   return (
     <Grid
       container
+      sx={
+        {
+          mt:20
+        }
+      }
       className={classes.carousel}
     >
       <Grid

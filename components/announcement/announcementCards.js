@@ -11,7 +11,7 @@ export default function announcementCards () {
         </h1>
       <Announcement />
       <div className={classes.newsletterBox}>
-        <h1 className={styles.subHeading}>
+        <h1 className={styles.title}>
           Keep Up to Date with News,
           Resources and Events
         </h1>

@@ -9,15 +9,15 @@ export default function Index() {
         <div
             className={classes.eventCard}
         >
-            <div className={classes.eventImageBox} 
+            <div 
+            className={classes.eventImageBox} 
             >
-                <Image
-                    // component="img"
-                    height={300}
+                <CardMedia
+                    component="img"
+                    height={400}
                     width={1200}
                     alt="event image"
                     src="/images/persona6.jpg"
-                    // className="classes.eventImageBox"
                 />
                 {/* dfdfdfd */}
             </div>

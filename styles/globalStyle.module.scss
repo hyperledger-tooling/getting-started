@@ -17,11 +17,20 @@
 }
 .subHeading{
   font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
+  font-weight: 450;
+  font-size: 2.2rem;
   line-height: 4rem;
   text-align: center;
   color:#302e2e;
+}
+.title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 4rem;
+  color:#302e2e;
+  // background-color: green;
+  margin: 1rem;
 }
 
 .textBox {
@@ -86,23 +95,24 @@
   // background-color: rgb(145, 196, 145);
   width:80%;
 }
-.title{
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 4rem;
-  color:#302e2e;
-  // background-color: green;
-  margin: 1rem;
-}
+
 .cardSection {
   display: flex;
   align-items: center;
   justify-content:center;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
-
+.buttonSection{
+  display: flex;
+  justify-content:center;
+}
+.buttonSection div{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  margin:1rem;
+}
 
 @media (max-width: full) {
   

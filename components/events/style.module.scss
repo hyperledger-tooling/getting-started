@@ -12,19 +12,8 @@
     width: 100vw;
     box-shadow: none;
 }
-
-.eventImageBox {
-    border-radius:20px;
-    width:100%;
-    height: 50vh;
-    object-fit: contain;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .eventImageBox img{
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 20px;
 }
 .eventCardContent {

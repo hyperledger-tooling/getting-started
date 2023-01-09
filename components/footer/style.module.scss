@@ -1,5 +1,6 @@
 .footerBox {
     background-color: #141414;
+    // margin-top: 1rem;
 }
 .footerHeader{
     display: flex;
@@ -15,6 +16,7 @@
     background-color: white;
     border-radius: 50%;
     padding:0.5rem;
+    cursor: pointer;
 }
 .footerContent {
     display: flex;

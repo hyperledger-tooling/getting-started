@@ -10,8 +10,21 @@ import Popover from '@mui/material/Popover';
 import { useState } from 'react';
 import NavbarHover from './NavbarHover';
 import styles from '../../styles/globalStyle.module.scss'
+import HoverMenu from 'material-ui-popup-state/HoverMenu'
+import MenuItem from '@mui/material/MenuItem'
+import {
+  usePopupState,
+  bindHover,
+  bindMenu,
+} from 'material-ui-popup-state/hooks'
+
 
 export default function Index() {
+
+  const popupState = usePopupState({
+    variant: 'popover',
+    popupId: 'demoMenu',
+  })
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -35,6 +48,7 @@ export default function Index() {
   };
 
   const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
   return (
     <>
@@ -42,9 +56,9 @@ export default function Index() {
         color="inherit"
         elevation={0}
         className={classes.appBar}
-        >
-        <Toolbar 
-        className={classes.toolBar}
+      >
+        <Toolbar
+          className={classes.toolBar}
         >
           <div
             className={classes.logo}
@@ -72,31 +86,65 @@ export default function Index() {
             </Link>
 
             <div>
-              <p
-                aria-owns={open ? 'mouse-over-popover' : undefined}
-                aria-haspopup="true"
-                onMouseEnter={handlePopoverOpen}
-                onMouseLeave={handlePopoverClose}
-                className={classes.typography}
-              >
-                <Link href="projects">
+              <Box className={classes.typography}
+                variant="contained" {...bindHover(popupState)}>
+                <Link href="projects" >
                   Projects
                 </Link>
-              </p>
-              < Popover
-                id="mouse-over-popover"
-                sx={{
-                  pointerEvents: 'none',
+              </Box>
+              <HoverMenu
+                PaperProps={{
+                  style: {
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                  },
                 }}
-                open={open}
-                anchorReference="none"
-                onClose={handlePopoverClose}
-                disableRestoreFocus
-                className={classes.popover}
+                // onMouseEnter={handlePopoverOpen}
+                // onMouseLeave={handlePopoverClose}
+
+                {...bindMenu(popupState)}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               >
-                <NavbarHover />
-              </Popover>
+                <MenuItem
+                  disableRipple
+                  style={{ background: 'transparent', boxShadow: 'none' }}
+                  onClick={popupState.close}>
+                  <NavbarHover />
+                </MenuItem>
+              </HoverMenu>
             </div>
+
+            {/* <div>
+              <Box className={classes.typography}
+                variant="contained" {...bindHover(popupState)}>
+                <Link href="projects" >
+                  Projects
+                </Link>
+              </Box>
+              <HoverMenu
+                PaperProps={{
+                  style: {
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                  },
+                }}
+                // onMouseEnter={handlePopoverOpen}
+                // onMouseLeave={handlePopoverClose}
+
+                {...bindMenu(popupState)}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              >
+                <MenuItem
+                  style={{ background: 'transparent', boxShadow: 'none' }}
+                  onClick={popupState.close}>
+                  <NavbarHover />
+                </MenuItem>
+              </HoverMenu>
+            </div> */}
+
+
             <div>
               <p
                 aria-owns={open ? 'mouse-over-popover' : undefined}
@@ -109,7 +157,7 @@ export default function Index() {
                   Community
                 </Link>
               </p>
-              < Popover
+              {/* < Popover
                 id="mouse-over-popover"
                 sx={{
                   pointerEvents: 'none',
@@ -123,8 +171,10 @@ export default function Index() {
                 <Box>
                   <NavbarHover />
                 </Box>
-              </Popover>
+              </Popover> */}
             </div>
+
+
             <div>
               <p
                 aria-owns={open ? 'mouse-over-popover' : undefined}
@@ -137,11 +187,12 @@ export default function Index() {
                   Events
                 </Link>
               </p>
-              < Popover
+              {/* < Popover
                 id="mouse-over-popover"
                 sx={{
                   pointerEvents: 'none',
                 }}
+                transitionDuration="300"
                 open={open}
                 anchorReference="none"
                 className={classes.popover}
@@ -151,24 +202,9 @@ export default function Index() {
                 <Box>
                   <NavbarHover />
                 </Box>
-              </Popover>
+              </Popover> */}
             </div>
 
-            {/* <Link href="community">
-              <Typography
-                className={classes.typography}
-              >
-                Community
-              </Typography>
-            </Link>
-
-            <Link href="events">
-              <Typography
-                className={classes.typography}
-              >
-                Events
-              </Typography>
-            </Link> */}
 
             <Link href="https://www.hyperledger.org/">
               <p

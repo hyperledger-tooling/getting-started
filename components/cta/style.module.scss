@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
 }
 .ctaCardMedia {
     // background-color: rgb(67, 80, 67);
@@ -55,13 +56,38 @@
     color:#393c3f;
 }
 .ctaCardDesc {
-    // width: 289px;
-    // height: 66px;
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 1rem;
     // line-height: 20px;
     display: flex;
     align-items: center;
     color: #393c3f;
+}
+
+@media (max-width: full) {
+    
+}
+
+@media (max-width: 1050px){
+    
+    
+}
+@media (max-width:900px) {
+    .ctaCardTitle{
+        font-size: 1.2rem;
+    }
+   .ctaCardDesc{
+    font-size: 0.9rem;
+   }
+}
+
+@media (max-width: 600px){
+    .ctaCardTitle{
+        font-size: 1.2rem;
+    }
+   .ctaCardDesc{
+    font-size: 0.9rem;
+   }
+
 }

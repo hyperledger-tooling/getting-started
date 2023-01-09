@@ -27,7 +27,7 @@ function Index() {
         </div>
       </div>
 
-      {/* <hr /> */}
+      <hr />
       <div className={classes.footerContent}>
         <div className={classes.footerContentCards}>
           <h3>About Us</h3>

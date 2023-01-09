@@ -2,8 +2,8 @@ import React from 'react'
 import classes from '../../styles/globalStyle.module.scss'
 import BigCard from '../../components/cards/general/bigCard'
 import VideoCard from '../../components/cards/general/videoCard'
-import Card1 from '../../components/cards/projectCards/card1'
-import Card2 from '../../components/cards/projectCards/card2'
+import ProfileCard from '../../components/cards/projectCards/profileCard'
+import CtaCard from '../../components/cards/projectCards/ctaCard'
 
 function index() {
     return (
@@ -29,7 +29,7 @@ function index() {
 
 
             <div className={classes.headingSection}>
-                <h1 className={classes.heading}>
+                <h1 className={classes.subHeading}>
                     Know about Hypedger Projects
                 </h1>
             </div>
@@ -38,39 +38,43 @@ function index() {
                 <VideoCard />
             </div>
 
-            {/* Project section and dropdown */}
+            <div className={classes.headingSection}>
+                <h1 className={classes.subHeading}>
+                    Get Started with Hyperledger fabric
+                </h1>
+            </div>
+
+            <div className={classes.cardSection}>
+                <CtaCard />
+            </div>
+
+
+
+            <div className={classes.headingSection}>
+                <h1 className={classes.subHeading}>
+                    Project Maintainers and Contributors
+                </h1>
+
+            </div>
+
             <div className={classes.project}>
                 <div className={classes.projectSection}>
                     <div>
                         <div className={classes.title} >
-                            Hyperledger
                             <div className={classes.cardSection}>
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                                <Card1 />
-                            </div>
-                        </div>
-                        <div className={classes.title} >
-                            Hyperledger labs
-                            <div className={classes.cardSection}>
-                                <Card2 />
-                                <Card2 />
-                                <Card2 />
-                                <Card2 />
-                                <Card2 />
-                                <Card2 />
-                                <Card2 />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
         </div>
 
     )
