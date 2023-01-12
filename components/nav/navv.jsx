@@ -106,7 +106,8 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page} 
+                                onClick={handleCloseNavMenu}>
                                     <Typography
                                         variant='body1'
                                         textAlign="center"
@@ -118,7 +119,7 @@ const ResponsiveAppBar = () => {
                         </Menu>
                     </Box>
                     {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                    <Typography
+                    {/* <Typography
                         variant="h5"
                         noWrap
                         component="a"
@@ -143,7 +144,7 @@ const ResponsiveAppBar = () => {
                                 alt="logo"
                             />
                         </Box>
-                    </Typography>
+                    </Typography> */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button

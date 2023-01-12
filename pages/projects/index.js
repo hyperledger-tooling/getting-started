@@ -33,7 +33,7 @@ function index() {
                 </div>
             </div>
 
-            <div className={classes.headingSection}>
+            <div className={classes.headingSection} id="incubatedProjects">
                 <h1 className={classes.heading}>
                     Incubating Hyperledger Projects
                 </h1>

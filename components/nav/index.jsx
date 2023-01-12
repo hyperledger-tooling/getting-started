@@ -1,5 +1,5 @@
 import React, { } from 'react'
-import { AppBar, Toolbar, Typography } from '@mui/material'
+import { AppBar, Menu, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,17 +16,29 @@ import {
   usePopupState,
   bindHover,
   bindMenu,
+  bindTrigger,
 } from 'material-ui-popup-state/hooks'
-
+import { Subtitles } from '@mui/icons-material';
+import navbarContents from '../../data/navbarData';
 
 export default function Index() {
 
-  const popupState = usePopupState({
+  const projectPopupState = usePopupState({
     variant: 'popover',
-    popupId: 'demoMenu',
+    popupId: 'project',
+  })
+  const communityPopupState = usePopupState({
+    variant: 'popover',
+    popupId: 'community',
+  })
+  const eventsPopupState = usePopupState({
+    variant: 'popover',
+    popupId: 'events',
   })
 
   const [anchorEl, setAnchorEl] = useState(null);
+  const popupState = usePopupState({ variant: 'popover', popupId: 'demoMenu' })
+
 
   const handlePopoverOpen = () => {
     // setAnchorEl("root");
@@ -36,8 +48,6 @@ export default function Index() {
   const handlePopoverClose = () => {
     setAnchorEl(null);
   };
-
-
 
   const handleOpenNavMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -87,7 +97,7 @@ export default function Index() {
 
             <div>
               <Box className={classes.typography}
-                variant="contained" {...bindHover(popupState)}>
+                variant="contained" {...bindHover(projectPopupState)}>
                 <Link href="projects" >
                   Projects
                 </Link>
@@ -102,24 +112,23 @@ export default function Index() {
                 // onMouseEnter={handlePopoverOpen}
                 // onMouseLeave={handlePopoverClose}
 
-                {...bindMenu(popupState)}
+                {...bindMenu(projectPopupState)}
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                 transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               >
                 <MenuItem
                   disableRipple
                   style={{ background: 'transparent', boxShadow: 'none' }}
-                  onClick={popupState.close}>
-                  <NavbarHover />
+                  onClick={projectPopupState.close}>
+                  <NavbarHover data={navbarContents[0]}/>
                 </MenuItem>
               </HoverMenu>
             </div>
-
-            {/* <div>
+            <div>
               <Box className={classes.typography}
-                variant="contained" {...bindHover(popupState)}>
-                <Link href="projects" >
-                  Projects
+                variant="contained" {...bindHover(communityPopupState)}>
+                <Link href="community" >
+                  Community
                 </Link>
               </Box>
               <HoverMenu
@@ -132,78 +141,55 @@ export default function Index() {
                 // onMouseEnter={handlePopoverOpen}
                 // onMouseLeave={handlePopoverClose}
 
-                {...bindMenu(popupState)}
+                {...bindMenu(communityPopupState)}
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                 transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               >
                 <MenuItem
+                  disableRipple
                   style={{ background: 'transparent', boxShadow: 'none' }}
-                  onClick={popupState.close}>
-                  <NavbarHover />
+                  onClick={communityPopupState.close}>
+                  <NavbarHover data={navbarContents[1]} />
                 </MenuItem>
               </HoverMenu>
-            </div> */}
-
-
-            <div>
-              <p
-                aria-owns={open ? 'mouse-over-popover' : undefined}
-                aria-haspopup="true"
-                onMouseEnter={handlePopoverOpen}
-                onMouseLeave={handlePopoverClose}
-                className={classes.typography}
-              >
-                <Link href="community">
-                  Community
-                </Link>
-              </p>
-              {/* < Popover
-                id="mouse-over-popover"
-                sx={{
-                  pointerEvents: 'none',
-                }}
-                open={open}
-                anchorReference="none"
-                className={classes.popover}
-                onClose={handlePopoverClose}
-                disableRestoreFocus
-              >
-                <Box>
-                  <NavbarHover />
-                </Box>
-              </Popover> */}
             </div>
-
-
             <div>
-              <p
-                aria-owns={open ? 'mouse-over-popover' : undefined}
-                aria-haspopup="true"
-                onMouseEnter={handlePopoverOpen}
-                onMouseLeave={handlePopoverClose}
-                className={classes.typography}
-              >
-                <Link href="events">
+              <Box className={classes.typography}
+                variant="contained" {...bindHover(eventsPopupState)}>
+                <Link href="events" >
                   Events
                 </Link>
-              </p>
-              {/* < Popover
-                id="mouse-over-popover"
-                sx={{
-                  pointerEvents: 'none',
+              </Box>
+              <HoverMenu
+                PaperProps={{
+                  style: {
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                  },
                 }}
-                transitionDuration="300"
-                open={open}
-                anchorReference="none"
-                className={classes.popover}
-                onClose={handlePopoverClose}
-                disableRestoreFocus
+                // onMouseEnter={handlePopoverOpen}
+                // onMouseLeave={handlePopoverClose}
+
+                {...bindMenu(eventsPopupState)}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               >
-                <Box>
-                  <NavbarHover />
-                </Box>
-              </Popover> */}
+                <MenuItem
+                  disableRipple
+                  style={{ background: 'transparent', boxShadow: 'none' }}
+                  onClick={eventsPopupState.close}>
+                  <NavbarHover data={navbarContents[2]}/>
+                </MenuItem>
+              </HoverMenu>
             </div>
+
+            <Link href="learn">
+              <p
+                className={classes.typography}
+              >
+                Learn
+              </p>
+            </Link>
 
 
             <Link href="https://www.hyperledger.org/">
@@ -230,9 +216,55 @@ export default function Index() {
               size="large"
               color="inherit"
               onClick={handleOpenNavMenu}
+              variant="contained" {...bindTrigger(popupState)}
             >
               <MenuIcon />
             </IconButton>
+
+
+            <Menu
+              {...bindMenu(popupState)}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              sx={
+                {
+                  display: {
+                    md: "none"
+                  },
+                  mt: 5
+                }
+              }
+              className={classes.menuContainer}
+              PaperProps={{
+                style: {
+                  backgroundColor: 'white',
+                  boxShadow: 'none',
+                },
+              }}
+
+            >
+              {
+                navbarContents.map((data, idx) => (
+                  <div key={idx} className={classes.menuItem}>
+                    <Link href="projects">
+                      <h2>{data.title}</h2>
+                    </Link>
+                    <div className={classes.menuItemList}>
+
+                      {
+                        data.subTitles.map((subTitle, id) => (
+                          <Link key={id} href="projects">
+                            <p>{subTitle.name}</p>
+                          </Link>
+                        ))
+                      }
+                    </div>
+                  </div>
+                ))
+              }
+
+
+            </Menu>
           </Box>
         </Toolbar>
       </AppBar>

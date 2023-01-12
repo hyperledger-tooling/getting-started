@@ -21,7 +21,7 @@ function index() {
       </div>
 
       <div className={classes.headingSection}>
-        <BigCard />
+        <BigCard img='/images/road.png' />
         <div className={classes.textBox}>
           <p>
             A global enterprise blockchain project that offers the necessary framework, standards, guidelines, and tools to build open-source blockchains and related applications for use across various industries.F

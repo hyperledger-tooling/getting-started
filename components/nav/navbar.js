@@ -1,11 +1,14 @@
 import React from 'react'
 import Navbar from './index';
-import Popover from './popover'
+import Navv from './navv'
+import Menuu from './menu'
+
 function Index() {
   return (
     <>
         <Navbar />
-        {/* <Popover /> */}
+        {/* <Navv /> */}
+        {/* <Menuu /> */}
     </>
   )
 }

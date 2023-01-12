@@ -5,6 +5,13 @@
     background-color: rgb(55, 52, 52);
     border-radius: 20px;
 }
+.bigCard img{
+  // position:relative;
+  // height: 50vh;
+  // width:80vw;
+  object-fit:contain;
+  border-radius: 20px;
+}
 
 // Video card Css
 .videoCard{

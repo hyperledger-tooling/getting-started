@@ -1,10 +1,17 @@
 import React from 'react'
 import classes from '../style.module.scss'
+import Image from 'next/image'
 
-function bigCard() {
+function bigCard({ img }) {
     return (
         <div className={classes.bigCard}>
-            
+            <Image
+                src={img}
+                height="360px"
+                width="1200px"
+                alt="roadmap image"
+                className={classes.bigCardImage}
+            />
         </div>
     )
 }

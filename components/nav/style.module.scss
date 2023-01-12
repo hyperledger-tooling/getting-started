@@ -57,14 +57,14 @@
     background-color:#f9f9f9;
     padding:3rem;
     color: #606060;
-    height:300px;
-    width: 900px;
+    min-height:350px;
+    min-width: 900px;
     margin: 3rem;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 128px 51px rgba(54, 142, 182, 0.01), 0px 72px 43px rgba(54, 142, 182, 0.05), 0px 32px 32px rgba(54, 142, 182, 0.09), 0px 8px 18px rgba(54, 142, 182, 0.1), 0px 0px 0px rgba(54, 142, 182, 0.1);
+    filter: drop-shadow(0px 37px 15px rgba(0, 117, 201, 0.01)) drop-shadow(0px 21px 12px rgba(0, 117, 201, 0.05)) drop-shadow(0px 9px 9px rgba(0, 117, 201, 0.09)) drop-shadow(0px 2px 5px rgba(0, 117, 201, 0.1)) drop-shadow(0px 0px 0px rgba(0, 117, 201, 0.1));
 }
 .navbarBox {
     width:100vw;
@@ -77,10 +77,11 @@
 .navbarContent {
     color: #606060;
     height: 100%;
+    font-family: 'Poppins';
 }
 .navbarContent li {
     list-style: none;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 .navbarHeading {
     color:#111;
@@ -92,11 +93,14 @@
     height: 100%;
     width:300px;
     border-radius:20px;
-    background-color: #fff;
+    // background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.navbarCardsImageBox {
+    // background-color: red;
 }
 .navbarCards img {
     border-radius: 20px;
@@ -110,6 +114,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// Menu Item
+.menuContainer {
+    width:100vw;
+    height: auto;
+    border-radius: 20px;
+}
+.menuItem {
+    width:100vw;
+    background-color: white;
+    // margin-top: 1rem;
+}
+.menuItem h2{
+    padding:0 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor:pointer;
+}
+.menuItemList {
+    padding: 0 1rem;
+}
+.menuItemList p {
+    padding:4px 10px;
+    border-radius: 50px;
+    width:90%;
+    line-height: 1rem;
+}
+.menuItemList p:hover {
+    background-color: rgb(228, 222, 222);
+    cursor:pointer;
 }
 
 @media (max-width: full) {

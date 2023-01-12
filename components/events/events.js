@@ -8,7 +8,7 @@ import styles from '../../styles/globalStyle.module.scss'
 function Index() {
     return (
         <div>
-            <h1 className={styles.heading}>
+            <h1 className={styles.heading} id="events">
                 Events
             </h1>
             <div className={classes.eventBox}>
