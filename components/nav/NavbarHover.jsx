@@ -32,7 +32,7 @@ function NavbarHover({ data }) {
         </div>
         <div className={classes.navbarCards}>
           <div className={classes.navbarCardsImageBox}>
-            <Image height="150px" width="250px" src={data.images[0]?.src || "/logos/fabric.svg"} alt="project icon" />
+            <Image className={classes.navbarCardsImage} height="150px" width="280px" src={data.images[0]?.src || "/logos/fabric.svg"} alt="project icon" />
           </div>
           <div className={classes.navbarCardContent}>
             {data.images[0]?.content}
@@ -43,7 +43,9 @@ function NavbarHover({ data }) {
           </p>
         </div>
         <div className={classes.navbarCards}>
-          <Image height="150px" width="250px" src={data.images[1]?.src || "/logos/fabric.svg"} alt="project icon" />
+          <div className={classes.navbarCardsImageBox}>
+            <Image className={classes.navbarCardsImage} height="150px" width="280px" src={data.images[1]?.src || "/logos/fabric.svg"} alt="project icon" />
+          </div>
           <div className={classes.navbarCardContent}>
             {data.images[1]?.content}
           </div>

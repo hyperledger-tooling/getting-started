@@ -31,9 +31,10 @@ export default function Index() {
     variant: 'popover',
     popupId: 'community',
   })
+  
   const eventsPopupState = usePopupState({
     variant: 'popover',
-    popupId: 'events',
+    popupId: 'event',
   })
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -118,12 +119,13 @@ export default function Index() {
               >
                 <MenuItem
                   disableRipple
-                  style={{ background: 'transparent', boxShadow: 'none' }}
+                  style={{ background: 'transparent', boxShadow: 'none', display: "flex", alignItems: "center", justifyContent: "center" }}
                   onClick={projectPopupState.close}>
-                  <NavbarHover data={navbarContents[0]}/>
+                  <NavbarHover data={navbarContents[0]} />
                 </MenuItem>
               </HoverMenu>
             </div>
+            
             <div>
               <Box className={classes.typography}
                 variant="contained" {...bindHover(communityPopupState)}>
@@ -149,14 +151,15 @@ export default function Index() {
                   disableRipple
                   style={{ background: 'transparent', boxShadow: 'none' }}
                   onClick={communityPopupState.close}>
-                  <NavbarHover data={navbarContents[1]} />
+                  <NavbarHover data={navbarContents[2]} />
                 </MenuItem>
               </HoverMenu>
             </div>
+
             <div>
               <Box className={classes.typography}
                 variant="contained" {...bindHover(eventsPopupState)}>
-                <Link href="events" >
+                <Link href="https://www.hyperledger.org/events" >
                   Events
                 </Link>
               </Box>
@@ -178,7 +181,7 @@ export default function Index() {
                   disableRipple
                   style={{ background: 'transparent', boxShadow: 'none' }}
                   onClick={eventsPopupState.close}>
-                  <NavbarHover data={navbarContents[2]}/>
+                  <NavbarHover data={navbarContents[1]} />
                 </MenuItem>
               </HoverMenu>
             </div>

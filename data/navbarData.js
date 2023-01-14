@@ -5,11 +5,11 @@ const navbarContents = [
     subTitles: [
       {
         "name": "Incubated Projects",
-        "link": "#incubaedProjects"
+        "link": "projects/#incubatedProjects"
       },
       {
         "name": "Graduated Projects",
-        "link": "#graduatedProjects"
+        "link": "projects/#graduatedProjects"
       },
       {
         "name": "Propose a Project",
@@ -38,23 +38,23 @@ const navbarContents = [
     subTitles: [
       {
         "name": "Webinars",
-        "link": "#events"
+        "link": "https://www.hyperledger.org/learn/webinars"
       },
       {
         "name": "Blogs",
-        "link": "#blogs"
+        "link": "https://www.hyperledger.org/news/blog"
       },
       {
         "name": "Announcement",
-        "link": "#announcements"
+        "link": "https://www.hyperledger.org/news/announcements"
       },
       {
         "name": "Meetups",
-        "link": ""
+        "link": "https://www.meetup.com/pro/hyperledger/"
       },
       {
         "name": "Calender",
-        "link": ""
+        "link": "https://wiki.hyperledger.org/display/HYP/Calendar+of+Public+Meetings"
       },
     ],
     images: [
@@ -74,7 +74,7 @@ const navbarContents = [
     subTitles: [
       {
         "name": "Members",
-        "link": ""
+        "link": "/community"
       },
       {
         "name": "Newcommers Path",
@@ -82,19 +82,19 @@ const navbarContents = [
       },
       {
         "name": "Mentorship",
-        "link": ""
+        "link": "https://wiki.hyperledger.org/display/INTERN"
       },
       {
         "name": "Sigs",
-        "link": ""
+        "link": "https://wiki.hyperledger.org/display/HYP/Special+Interest+Groups"
       },
       {
         "name": "Working Groups",
-        "link": ""
+        "link": "https://wiki.hyperledger.org/#Hyperledger-WorkingGroups"
       },
       {
         "name": "Regional Chapters",
-        "link": ""
+        "link": "https://www.hyperledger.org/participate/regional-communities"
       },
     ],
     images: [
@@ -114,15 +114,15 @@ const navbarContents = [
     subTitles: [
       {
         "name": "Resources",
-        "link": ""
+        "link": "/learn"
       },
       {
         "name": "Training & Certifications",
-        "link": ""
+        "link": "https://www.hyperledger.org/learn/training"
       },
       {
         "name": "Open Source Internships",
-        "link": ""
+        "link": "https://wiki.hyperledger.org/display/INTERN"
       },
     ],
     images: [

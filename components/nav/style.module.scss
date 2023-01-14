@@ -57,7 +57,7 @@
     background-color:#f9f9f9;
     padding:3rem;
     color: #606060;
-    min-height:350px;
+    min-height:300px;
     min-width: 900px;
     margin: 3rem;
     border-radius: 20px;
@@ -81,7 +81,7 @@
 }
 .navbarContent li {
     list-style: none;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 .navbarHeading {
     color:#111;
@@ -93,18 +93,25 @@
     height: 100%;
     width:300px;
     border-radius:20px;
-    // background-color: #fff;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .navbarCardsImageBox {
-    // background-color: red;
-}
-.navbarCards img {
+    // background-color: rgb(226, 105, 105);
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
+}
+.navbarCardsImage {
+    border-radius: 20px;
+    // object-fit: contain;
+    // width: 100%;
+    // height: 100%;
 }
 .navbarCardContent {
     color:#111;

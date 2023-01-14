@@ -9,7 +9,7 @@ function index() {
     return (
         <div className={classes.section}>
             <div className={classes.headingSection}>
-                <h1 className={classes.heading}>
+                <h1 className={classes.heading} id="graduatedProjects">
                     Graduated Hyperledger Projects
                 </h1>
             </div>

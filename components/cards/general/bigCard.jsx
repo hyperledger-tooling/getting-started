@@ -8,7 +8,7 @@ function bigCard({ img }) {
             <Image
                 src={img}
                 height="360px"
-                width="1200px"
+                width="1230px"
                 alt="roadmap image"
                 className={classes.bigCardImage}
             />
